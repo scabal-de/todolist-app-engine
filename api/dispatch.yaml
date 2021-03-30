@@ -1,0 +1,14 @@
+dispatch:
+  # Default service serves simple hostname request.
+  - url: "*wi-frio.solkos.com.mx/*"
+    service: wi-frio
+
+  - url: "*console.solkos.com.mx/*"
+    service: solkos-console
+
+  - url: "*/wifrio-api/*"
+    service: wi-frio-db
+
+  # Send all trafic on /api to api service.
+  - url: "*/api-demo/*"
+    service: api-demo
